@@ -232,3 +232,16 @@ body{
 }
 .t-content h3{ margin-bottom: 6px; }
 
+/* Scroll reveal animation */
+.reveal{
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 600ms ease, transform 600ms ease;
+  will-change: opacity, transform;
+}
+
+.reveal.show{
+  opacity: 1;
+  transform: translateY(0);
+}
+
