@@ -13,3 +13,21 @@ copyBtn.addEventListener("click", () => {
   copyBtn.textContent = "Copied ✅";
   setTimeout(() => (copyBtn.textContent = "Copy Email"), 1500);
 });
+
+// Scroll reveal for sections
+const revealEls = document.querySelectorAll(".section, .hero, .card, .t-content");
+
+revealEls.forEach(el => el.classList.add("reveal"));
+
+const io = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  },
+  { threshold: 0.12 }
+);
+
+revealEls.forEach(el => io.observe(el));
