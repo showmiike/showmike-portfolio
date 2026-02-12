@@ -7,12 +7,15 @@ function demoAlert(e){
 }
 
 const copyBtn = document.getElementById("copyBtn");
-copyBtn.addEventListener("click", () => {
-  const email = "yourname@email.com"; // change this
-  navigator.clipboard.writeText(email);
-  copyBtn.textContent = "Copied ✅";
-  setTimeout(() => (copyBtn.textContent = "Copy Email"), 1500);
-});
+
+if (copyBtn) {
+  copyBtn.addEventListener("click", () => {
+    const email = "yourname@email.com";
+    navigator.clipboard.writeText(email);
+    copyBtn.textContent = "Copied ✅";
+    setTimeout(() => (copyBtn.textContent = "Copy Email"), 1500);
+  });
+}
 
 // Scroll reveal for sections
 const revealEls = document.querySelectorAll(".section, .hero, .card, .t-content");
@@ -160,4 +163,3 @@ revealEls.forEach(el => io.observe(el));
   createParticles();
   loop();
 })();
-
