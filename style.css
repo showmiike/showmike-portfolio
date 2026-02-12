@@ -318,3 +318,26 @@ body::before{
 .team-grid .team-card.reveal:nth-child(4){ transition-delay: 270ms; }
 .team-grid .team-card.reveal:nth-child(5){ transition-delay: 360ms; }
 .team-grid .team-card.reveal:nth-child(6){ transition-delay: 450ms; }
+
+
+.social-line{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icons{
+  display: flex;
+  gap: 14px;
+}
+
+.social-icons a{
+  font-size: 20px;
+  color: #00c6ff;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover{
+  transform: translateY(-4px);
+  color: white;
+}
