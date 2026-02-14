@@ -454,8 +454,16 @@ body::before{
 
 .modal-content pre{
   white-space: pre-wrap;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  color: #cbd5e1;
+  word-break: break-word;   /* ✅ লাইন ভেঙে যাবে */
+  overflow-wrap: anywhere;  /* ✅ long line overflow আটকাবে */
+}
+
+.modal-content::-webkit-scrollbar{
+  width: 8px;
+}
+.modal-content::-webkit-scrollbar-thumb{
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
 }
 
 .close-btn{
@@ -465,6 +473,7 @@ body::before{
   font-size: 24px;
   cursor: pointer;
 }
+
 
 
 
