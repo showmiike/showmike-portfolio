@@ -8,8 +8,10 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="smhicon.png" />
 </head>
+
 <body>
   <canvas id="particles"></canvas>
+  <div id="scrollProgress"></div>
 
   <nav class="nav">
     <div class="logo">
@@ -24,43 +26,58 @@
 
   <main class="container">
     <section class="section">
+
       <div class="page-title">
-  <img src="images/axen-logo.png" alt="Axen Valley Logo" class="page-logo">
-  <h2>Axen Valley - Projects & Case Studies</h2>
+        <img src="images/axen-logo.png" alt="Axen Valley Logo" class="page-logo">
+        <h2>Axen Valley - Projects & Case Studies</h2>
       </div>
-      <p class="muted">A selection of SEO content and AI prompt engineering work.</p>
+
+      <p class="muted">
+        A selection of SEO content and AI prompt engineering work.
+      </p>
 
       <div class="grid team-grid">
 
+        <!-- Project 1 -->
         <div class="card">
           <h3>SEO Case Study: Keyword Research → Content Plan</h3>
           <p class="muted"><b>Goal:</b> Improve search visibility for an affiliate niche.</p>
-          <p><b>What We did:</b> Keyword clustering, search intent mapping, content brief + outline.</p>
+          <p><b>What I did:</b> Keyword clustering, search intent mapping, content brief + outline.</p>
           <p><b>Tools:</b> Google, SERP analysis, AI-assisted outlining</p>
-          <p><b>Result:</b> (Add metrics later: traffic/ranking/clicks)</p>
+          <p><b>Result:</b> (Add metrics later: traffic / ranking / clicks)</p>
+
           <div class="actions">
             <a class="btn ghost" href="#" onclick="demoAlert(event)">View Sample</a>
             <a class="btn ghost" href="#" onclick="demoAlert(event)">Download Brief</a>
           </div>
         </div>
 
+        <!-- Project 2 -->
         <div class="card">
           <h3>Affiliate Article: SEO + Conversion Copy</h3>
           <p class="muted"><b>Goal:</b> Write a high-converting, SEO-optimized affiliate article.</p>
-          <p><b>What We did:</b> Outline, FAQs, product comparison, on-page SEO, CTA placement.</p>
+          <p><b>What I did:</b> Outline, FAQs, product comparison, on-page SEO, CTA placement.</p>
           <p><b>Tools:</b> AI + editing, SEO structure, readability optimization</p>
           <p><b>Result:</b> (Add later)</p>
+
           <div class="actions">
-            <a class="btn ghost" href="#" onclick="demoAlert(event)">Read Article</a>
-            <a class="btn ghost" href="#" onclick="demoAlert(event)">View Outline</a>
+            <a class="btn ghost" href="assets/PrimeBiome-Article.pdf" target="_blank" rel="noopener">
+            Read Article
+            </a>
+            <a class="btn ghost" href="assets/PrimeBiome-Article.pdf" download>
+            Download PDF
+            </a>
+            <button class="btn ghost" onclick="openOutline()">View Outline</button>
           </div>
         </div>
 
+        <!-- Project 3 -->
         <div class="card">
           <h3>AI Prompt System: Content Workflow</h3>
           <p class="muted"><b>Goal:</b> Build a reusable prompt workflow for content production.</p>
-          <p><b>What I did:</b> Prompt templates for: research → outline → draft → QA checklist.</p>
+          <p><b>What I did:</b> Prompt templates for research → outline → draft → QA checklist.</p>
           <p><b>Includes:</b> Prompt library + quality control steps</p>
+
           <div class="actions">
             <a class="btn ghost" href="#" onclick="demoAlert(event)">View Prompts</a>
             <a class="btn ghost" href="#" onclick="demoAlert(event)">Copy Template</a>
@@ -70,6 +87,74 @@
       </div>
     </section>
   </main>
+
+  <!-- Outline Modal -->
+  <div id="outlineModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeOutline()">&times;</span>
+
+      <h3>SEO Case Study Outline – PrimeBiome Affiliate Article</h3>
+
+<pre>
+H1: Where To Buy PrimeBiome Online – What Sellers Don’t Want You to Know
+
+Primary Keyword: Where To Buy PrimeBiome Online  
+Search Intent: Commercial + Transactional  
+Word Count Target: 2,500–3,000 words  
+
+--------------------------------------------------
+
+H2: Introduction – Real Results vs Marketing Hype
+• Common probiotic expectations  
+• What most sellers hide  
+• Timeline preview (7, 30, 90 days)
+
+H2: What Is PrimeBiome & How Does It Work?
+  H3: Formula Overview
+  H3: Mechanism of Action
+      - Step 1: Bacillus Coagulans (Gut Reset)
+      - Step 2: Prebiotic Nourishment
+      - Step 3: Skin Microbiome Support
+
+H2: What Happens When You Start Taking It?
+  H3: Week 1–2 (Adjustment Phase)
+      - Temporary bloating
+      - Gut adaptation
+  H3: 30-Day Results
+      - Reduced bloating
+      - Improved skin clarity
+  H3: 60–90 Day Results
+      - Stable digestion
+      - Improved energy levels
+
+H2: Real User Reviews & Consumer Feedback
+• Reddit discussions  
+• Shipping concerns  
+• First-week side effects  
+
+H2: Are PrimeBiome Reviews Legit or Fake?
+• Verified buyers  
+• Third-party checks  
+• Amazon reseller warning  
+
+H2: Where To Buy PrimeBiome Safely
+• Official website only  
+• Pricing breakdown (1, 3, 6 bottles)  
+• Refund policy  
+
+H2: FAQ Section (Schema Optimized)
+• Is it safe?  
+• Who should avoid it?  
+• How long before results?  
+
+H2: Final Verdict
+• Who should buy  
+• Who should skip  
+• Clear CTA
+</pre>
+
+    </div>
+  </div>
 
   <footer class="footer">
     <p>© <span id="year"></span> Showmike Mondal Himu</p>
