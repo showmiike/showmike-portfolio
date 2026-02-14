@@ -420,7 +420,7 @@ body::before{
 
 /* Modal */
 .modal{
-  display: none;
+  display: none;          /* default hidden */
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.6);
@@ -452,3 +452,4 @@ body::before{
   font-size: 24px;
   cursor: pointer;
 }
+
