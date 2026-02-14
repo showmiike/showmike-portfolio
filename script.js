@@ -163,3 +163,13 @@ revealEls.forEach(el => io.observe(el));
   createParticles();
   loop();
 })();
+
+function openOutline(){
+  const modal = document.getElementById("outlineModal");
+  if(modal) modal.style.display = "flex";
+}
+
+function closeOutline(){
+  const modal = document.getElementById("outlineModal");
+  if(modal) modal.style.display = "none";
+}
