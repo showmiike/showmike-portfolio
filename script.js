@@ -173,3 +173,22 @@ function closeOutline(){
   const modal = document.getElementById("outlineModal");
   if(modal) modal.style.display = "none";
 }
+
+function openOutline(){
+  const modal = document.getElementById("outlineModal");
+  if(modal) modal.classList.add("open");
+}
+
+function closeOutline(){
+  const modal = document.getElementById("outlineModal");
+  if(modal) modal.classList.remove("open");
+}
+
+/* Optional: modal বাইরে click করলে close */
+document.addEventListener("click", (e) => {
+  const modal = document.getElementById("outlineModal");
+  if(!modal) return;
+  if(e.target === modal) modal.classList.remove("open");
+});
+
+
