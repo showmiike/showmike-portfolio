@@ -443,7 +443,12 @@ body::before{
   border-radius: 16px;
   border: 1px solid rgba(255,255,255,0.1);
   position: relative;
+
+  /* ✅ ADD THESE */
+  max-height: 80vh;      /* modal box screen এর ভেতরে থাকবে */
+  overflow-y: auto;      /* content বেশি হলে ভেতরে scroll হবে */
 }
+
 
 .modal-content h3{ margin-bottom: 12px; }
 
@@ -460,6 +465,7 @@ body::before{
   font-size: 24px;
   cursor: pointer;
 }
+
 
 
 
